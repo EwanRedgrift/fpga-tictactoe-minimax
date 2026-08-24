@@ -1,3 +1,4 @@
+
 # FPGA Tic-Tac-Toe Minimax AI
 
 A Tic-Tac-Toe AI implemented in SystemVerilog and running on a PYNQ-Z2 FPGA. The AI uses minimax with a depth-first search (DFS) implementation and an explicit stack instead of recursion. A Python program communicates with the FPGA over UART and provides the interface for playing against the hardware AI.
@@ -10,6 +11,8 @@ AI winning playing as X.
 
 [![AI winning playing as X](https://img.youtube.com/vi/tpSMH_JPTNU/maxresdefault.jpg)](https://youtu.be/tpSMH_JPTNU)
 Draw with AI playing as O.
+
+
 
 ## Implementation
 
@@ -75,3 +78,6 @@ All reported timing checks passed at the 125 MHz system clock.
 * PYNQ-Z2
 * Python
 * PySerial
+
+<img width="4284" height="5712" alt="IMG_1150" src="https://github.com/user-attachments/assets/fa95bb9b-a622-47df-bde4-df2cceb1ae0d" />
+
