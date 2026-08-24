@@ -2,7 +2,7 @@ package tictactoe_pkg;
     typedef struct packed {
         logic [8:0] x_bitboard;         // board state
         logic [8:0] o_bitboard;
-        logic       player_to_move;      // 1 = Max (X), 0 = Min (O)
+        logic       player_to_move;
         logic [8:0] remaining_moves; 
         logic signed [1:0] best_score;  // Current minimax evaluation (-1, 0, +1)
         logic [3:0] bestmove_index; 
@@ -81,10 +81,10 @@ module tictactoe (
     logic [8:0] latched_next_o_bitboard;
 
     always_comb begin
-        if (topData.player_to_move) begin // Max's turn (X)
+        if (topData.player_to_move) begin
             next_x_bitboard = topData.x_bitboard | latched_move_bit;
             next_o_bitboard = topData.o_bitboard;
-        end else begin                  // Min's turn (O)
+        end else begin
             next_x_bitboard = topData.x_bitboard;
             next_o_bitboard = topData.o_bitboard | latched_move_bit;
         end
