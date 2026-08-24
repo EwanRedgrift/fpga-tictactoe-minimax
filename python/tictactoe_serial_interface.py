@@ -142,7 +142,7 @@ def main():
                 print("Communication failed. Exiting.")
                 break
 
-            print(f"-> Decoded FPGA Move: Index {fpga_move}, Score: {score}")
+            print(f"-> Decoded FPGA Move: Index {fpga_move}")
             if x_turn: 
                 x_board |= (1 << fpga_move)
             else: 
